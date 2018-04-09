@@ -1,0 +1,19 @@
+{
+  "name": "hopper-learn-cli",
+  "version": "0.0.1",
+  "description": "just a cli for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hopperlearncli": "./index.js"
+  },
+  "author": "hopperhuang",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.15.1"
+  }
+}
