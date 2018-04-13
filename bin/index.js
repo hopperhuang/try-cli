@@ -38,6 +38,21 @@ const scriptHandler = {
     //   log('process exit, child process kill')
       proc.kill()
     })
+  },
+  dev () {
+    const proc = fork(
+      require.resolve(`./${script}.js`),
+      args,
+      {
+        stdio: 'inherit'
+      }
+    )
+    proc.once('exit', (code) => {
+      process.exit(code)
+    })
+    process.once('exit', () => {
+      proc.kill()
+    })
   }
 }
 // actions exist
